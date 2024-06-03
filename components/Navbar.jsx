@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [active, setActive] = useState("");
 
   return (
     <header className='w-full'>
@@ -38,29 +38,20 @@ const Navbar = () => {
           </div>
           <button 
               className='md:hidden text-2xl' 
-              onClick={() => {setIsMenuOpen(!isMenuOpen)
-              }}
+              onClick={() => { setIsMenuOpen(!isMenuOpen); }}
           >
-            &#9776;
+            {isMenuOpen ? 'X' : '☰'}
           </button>
-          <ul className={` flex flex-col z-[1000] justify-center items-center gap-5 py-5 shadow-md font-medium text-xl absolute top-0 left-0 w-full bg-white transition-transform transform ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+          <ul className={`flex flex-col z-[1000] justify-center items-center gap-5 py-5 px-10 font-medium text-xl absolute top-[-5px] right-0 shadow-lg rounded-xl bg-white transition-transform transform ${isMenuOpen ? 'translate-y-10 -translate-x-11' : '-translate-y-full -translate-x-11'}`}>
             <li className='flex items-center justify-center'>
               <Link href='#hero'>Home</Link>
             </li>
-            <li className='flex items-center justify-center hover:text-[#FF5555] duration-300'><Link href='#about'>About Us</Link></li>
-            <li className='flex items-center justify-center hover:text-[#FF5555] duration-300'><Link href='#pricing'>Pricing</Link></li>
-            <li className='flex items-center justify-center hover:text-[#FF5555] duration-300'><Link href='#features'>Features</Link></li>
-            <li className='flex items-center justify-center hover:text-[#FF5555] duration-300'>
-              <button className=' bg-zinc-900 rounded-[5px] px-10 py-4 text-white hover:bg-zinc-700 hover:scale-105  duration-300'>
-              <Link href='#download'>Download</Link>
-              </button>
-            </li>
-            <li className='flex items-center justify-center'>
-              <button 
-                className='text-[#FF5555] font-extrabold'
-                onClick={() => {setIsMenuOpen(false)}}
-              >
-                Close
+            <li onClick={() => { setIsMenuOpen(!isMenuOpen); }}  className='flex items-center justify-center hover:text-[#FF5555] duration-300'><Link href='#about'>About Us</Link></li>
+            <li onClick={() => { setIsMenuOpen(!isMenuOpen); }}  className='flex items-center justify-center hover:text-[#FF5555] duration-300'><Link href='#pricing'>Pricing</Link></li>
+            <li onClick={() => { setIsMenuOpen(!isMenuOpen); }}  className='flex items-center justify-center hover:text-[#FF5555] duration-300'><Link href='#features'>Features</Link></li>
+            <li onClick={() => { setIsMenuOpen(!isMenuOpen); }}  className='flex items-center justify-center hover:text-[#FF5555] duration-300'>
+              <button  className=' bg-zinc-900 rounded-[5px] px-10 py-4 text-white hover:bg-zinc-700 hover:scale-105  duration-300'>
+                <Link href='#download'>Download</Link>
               </button>
             </li>
           </ul>
