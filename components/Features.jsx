@@ -2,27 +2,29 @@
 
 import Image from 'next/image'
 import { useEffect } from 'react';
-import ScrollReveal from 'scrollreveal';
 
 const Features = () => {
-
   useEffect(() => {
-    ScrollReveal().reveal('.reveal', {
-      distance: '50px',
-      duration: 1000,
-      easing: 'ease-in-out',
-      origin: 'bottom',
-      reset: false,
-    });
-    ScrollReveal().reveal('.slideinright', {
+    if (typeof window !== 'undefined') {
+      const ScrollReveal = require('scrollreveal').default;
+
+      ScrollReveal().reveal('.reveal', {
+        distance: '50px',
+        duration: 1000,
+        easing: 'ease-in-out',
+        origin: 'bottom',
+        reset: false,
+      });
+      ScrollReveal().reveal('.slideinright', {
         distance: '70px',
         duration: 1000,
         easing: 'ease-in-out',
         origin: 'left',
         reset: false,
-    });
+      });
+    }
   }, []);
-
+  
   return (
     <section id="features" className="px-6 md:px-20 py-12 ">
       <div className="flex max-md:flex-col-reverse gap-16">

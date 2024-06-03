@@ -2,19 +2,22 @@
 
 import Image from 'next/image'
 import { useEffect } from 'react';
-import ScrollReveal from 'scrollreveal';
 import toast from 'react-hot-toast';
 
 const Download = () => {
 
     useEffect(() => {
-        ScrollReveal().reveal('.reveal', {
-          distance: '50px',
-          duration: 1500,
-          easing: 'ease-in-out',
-          origin: 'bottom',
-          reset: false,
-        });
+        if (typeof window !== 'undefined') {
+          const ScrollReveal = require('scrollreveal').default;
+    
+          ScrollReveal().reveal('.reveal', {
+            distance: '50px',
+            duration: 1000,
+            easing: 'ease-in-out',
+            origin: 'bottom',
+            reset: false,
+          });
+        }
       }, []);
 
     const handleDownloadClick = () => {

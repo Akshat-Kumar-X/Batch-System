@@ -3,7 +3,6 @@
 import { pricing } from "@/constants";
 import Image from "next/image";
 import { useEffect } from 'react';
-import ScrollReveal from 'scrollreveal';
 import toast from "react-hot-toast";
 
 const PriceCard = ({ plan, price, features }) => {
@@ -45,15 +44,18 @@ const PriceCard = ({ plan, price, features }) => {
 
 const Pricing = () => {
   
-
   useEffect(() => {
-    ScrollReveal().reveal('.reveal', {
-      distance: '70px',
-      duration: 1000,
-      easing: 'ease-in-out',
-      origin: 'bottom',
-      reset: false,
-    });
+    if (typeof window !== 'undefined') {
+      const ScrollReveal = require('scrollreveal').default;
+
+      ScrollReveal().reveal('.reveal', {
+        distance: '70px',
+        duration: 1000,
+        easing: 'ease-in-out',
+        origin: 'bottom',
+        reset: false,
+      });
+    }
   }, []);
 
   return (

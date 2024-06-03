@@ -3,33 +3,36 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect } from 'react';
-import ScrollReveal from 'scrollreveal';
 import toast from 'react-hot-toast';
 
 const Hero = () => {
 
   useEffect(() => {
-    ScrollReveal().reveal('.reveal', {
-      distance: '20px',
-      duration: 1000,
-      easing: 'ease-in-out',
-      origin: 'bottom',
-      reset: false,
-    });
-    ScrollReveal().reveal('.slideinleft', {
+    if (typeof window !== 'undefined') {
+      const ScrollReveal = require('scrollreveal').default;
+
+      ScrollReveal().reveal('.reveal', {
+        distance: '20px',
+        duration: 1000,
+        easing: 'ease-in-out',
+        origin: 'bottom',
+        reset: false,
+      });
+      ScrollReveal().reveal('.slideinleft', {
         distance: '50px',
         duration: 1000,
         easing: 'ease-in-out',
         origin: 'right',
         reset: false,
-    });
-    ScrollReveal().reveal('.slideinright', {
+      });
+      ScrollReveal().reveal('.slideinright', {
         distance: '50px',
         duration: 1000,
         easing: 'ease-in-out',
         origin: 'left',
         reset: false,
-    });
+      });
+    }
   }, []);
 
   const handleClick = () => {
@@ -123,4 +126,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero;
