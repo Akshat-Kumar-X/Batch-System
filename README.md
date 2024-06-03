@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Batch Systems
 
-## Getting Started
+## Deployed Link
+[Vercel Deployed Link](https://akshat-batch-systems.vercel.app/)
 
-First, run the development server:
+## GitHub Repository
+[Batch System on GitHub](https://github.com/Akshat-Kumar-X/Batch-System)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Overview
+This project showcases the effective use of modern web development technologies to create a responsive, dynamic, and visually appealing web application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Features and Technologies Used
+1. **Next.js Framework**:
+   - Utilized Next.js for building the application, leveraging its server-side rendering and static site generation capabilities.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+2. **Advanced Tailwind CSS**:
+   - Implemented advanced Tailwind CSS techniques for styling, ensuring a clean and maintainable codebase.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **Visually Stunning Animations**:
+   - Integrated animations using Framer Motion and ScrollReveal, enhancing the visual appeal and user engagement.
 
-## Learn More
+4. **Fully Responsive Design**:
+   - Designed a fully responsive and user-friendly UI, optimized for both mobile and desktop devices.
 
-To learn more about Next.js, take a look at the following resources:
+5. **Dynamic Data Fetching**:
+   - Implemented dynamic data fetching from `Data.js` to create and manage price cards, ensuring up-to-date information display.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+6. **Reusable Components**:
+   - Employed reusable components throughout the application to maintain code readability and modularity.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Cover Letter
+---
 
-## Deploy on Vercel
+**Dear Sir,**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+I hope this message finds you well. I am writing to express my enthusiasm for the opportunity to join your esteemed team. I have meticulously developed the Batch System application from scratch, ensuring that I meet all the criteria outlined for the project.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Project Highlights:**
+
+- **Next.js Framework:** Utilized for building the application, leveraging server-side rendering and static site generation.
+- **Advanced Tailwind CSS:** Employed for styling, ensuring a clean and maintainable codebase.
+- **Animations:** Integrated visually stunning animations using Framer Motion and ScrollReveal.
+- **Responsive Design:** Developed a fully responsive and user-friendly UI for both mobile and desktop devices.
+- **Dynamic Data Fetching:** Implemented dynamic data fetching from `Data.js` for creating and managing price cards.
+- **Reusable Components:** Used reusable components to maintain code readability and modularity.
+Best Regards,
+Akshat Kumar
+
+---
+
+## How to Run the Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Akshat-Kumar-X/Batch-System.git
